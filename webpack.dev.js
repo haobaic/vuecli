@@ -1,0 +1,40 @@
+var path = require('path') //node系统模块
+const setServer = require('./config/webpack.server.js');
+const setPlugins = require('./config/webpack.plugins.js');
+const setConf = require('./config/webpack.conf.js');
+const setModule = require('./config/webpack.module.js');
+function resolve(dir) {
+	return path.join(__dirname, dir);
+}
+//判断开发环境  判断是否打包
+const isProduction = process.env.npm_lifecycle_event === "build";
+module.exports = {
+	entry: './src/main.js', //入口文件,
+	mode: !isProduction ? 'development' : 'production', // 压缩模式
+	output: { //输出配置
+		publicPath: isProduction ? "./" : '/', //静态资源配置
+		filename: 'js/[name]-[hash].js', //输出名字配置【name】为原来的名字
+		chunkFilename: 'js/[name].bundle.js',
+		path: resolve(__dirname, 'dist') //输出的路径
+	},
+	devServer:setServer.devServer,
+	plugins: setPlugins.plugins,
+	//路径映射
+	resolve: { //引入vue.js
+		extensions: ['.vue', '.js'],
+		alias: {
+			'vue$': 'vue/dist/vue.js',
+			'@': resolve("src"),
+			'@assets': resolve('./src/assets'),
+			'@api': resolve('./src/api')
+		}
+	},
+	watch: true, // 开启监听文件更改，自动刷新
+	watchOptions: {
+		ignored: /node_modules/, //忽略不用监听变更的目录
+		aggregateTimeout: 500, //防止重复保存频繁重新编译,500毫米内重复保存不打包
+		poll: 1000 //每秒询问的文件变更的次数
+	},
+	optimization: setConf.optimization,
+	module:setModule.module
+}
