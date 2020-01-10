@@ -69,6 +69,7 @@ module.exports = {
 					"babelrc": false, // 不采用.babelrc的配置
 					"plugins": [
 						"babel-plugin-syntax-dynamic-import"
+						
 					]
 				},
 				exclude: file => (

@@ -6,6 +6,7 @@
 		</div>
 		<img src="@assets/images/2.png" alt="">
 		<div class="img"></div>
+		<el-button>el-button</el-button>
 		<router-view/>
 	</div>
 </template>
