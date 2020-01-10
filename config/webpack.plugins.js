@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -13,7 +13,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: "./public/index.html",
 			filename: 'index.html',
-			// favicon: './src/favicon.ico',
+			favicon: './public/favicon.ico',
 			inject: true, //js插入的位置，true/'head'/'body'/false
 			minify: {
 				removeAttributeQuotes: true, //去除引号

@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 var productionSourceMap= true;
 var cacheBusting=true;
 var cssSourceMap=true;

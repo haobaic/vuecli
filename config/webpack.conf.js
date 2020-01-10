@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 const TerserPlugin = require('terser-webpack-plugin'); //去除console
 module.exports = {
 	optimization: {

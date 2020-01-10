@@ -14,3 +14,7 @@
 ##项目打包
   
     npm run build  打包
+	
+##项目打包查看分析图
+	
+	npm run report  打包查看分析图
