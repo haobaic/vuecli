@@ -18,3 +18,7 @@
 ##项目打包查看分析图
 	
 	npm run report  打包查看分析图
+	
+##插件
+
+   引入了element ui 

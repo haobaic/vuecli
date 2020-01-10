@@ -1,13 +1,13 @@
 <template>
-	<div class="home">我是about</div>
+	<div class="about">我是about</div>
 </template>
 
 <script>
 </script>
 
 <style>
-	.home{
+	.about{
 		font-size: 50px;
-		color: #fff;
+		color: black;
 	}
 </style>

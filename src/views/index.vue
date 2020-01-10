@@ -23,6 +23,6 @@
 <style scoped>
 	.home{
 		font-size: 50px;
-		color: #fff;
+		color: black;
 	}
 </style>
