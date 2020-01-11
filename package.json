@@ -16,6 +16,7 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^7.0.0-beta.3",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.1",
     "element-ui": "^2.4.5",
@@ -47,16 +48,5 @@
     "babel-plugin-component": "^1.1.1",
     "vue-cli-plugin-element": "^1.0.1"
   },
-  "license": "ISC",
-  "babel": {
-    "plugins": [
-      [
-        "component",
-        {
-          "libraryName": "element-ui",
-          "styleLibraryName": "theme-chalk"
-        }
-      ]
-    ]
-  }
+  "license": "ISC"
 }

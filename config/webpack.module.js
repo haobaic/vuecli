@@ -17,23 +17,23 @@ module.exports = {
 					publicPath: "../" //背景图路径
 				})
 			},
-			{
-			  test: /\.sass$/,
-			  use: [
-			    'vue-style-loader',
-			    'css-loader',
-			    {
-			      loader: 'sass-loader',
-			      options: {
-			        indentedSyntax: true,
-			        // sass-loader version >= 8
-			        sassOptions: {
-			          indentedSyntax: true
-			        }
-			      }
-			    }
-			  ]
-			},
+			// {
+			//   test: /\.sass$/,
+			//   use: [
+			//     'vue-style-loader',
+			//     'css-loader',
+			//     {
+			//       loader: 'sass-loader',
+			//       options: {
+			//         indentedSyntax: true,
+			//         // sass-loader version >= 8
+			//         sassOptions: {
+			//           indentedSyntax: true
+			//         }
+			//       }
+			//     }
+			//   ]
+			// },
 			{
 			  test: /\.less$/,
 			  use: [
