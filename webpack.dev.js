@@ -3,6 +3,7 @@ const setServer = require('./config/webpack.server.js');
 const setPlugins = require('./config/webpack.plugins.js');
 const setConf = require('./config/webpack.conf.js');
 const setModule = require('./config/webpack.module.js');
+const setCdn=require('./config/webpack.cdn.js');
 function resolve(dir) {
 	return path.join(__dirname, dir);
 }
@@ -20,6 +21,7 @@ module.exports = {
 		chunkFilename: 'js/[name].bundle.js',
 		path: path.resolve(__dirname, 'dist') //输出的路径
 	},
+	externals:setCdn.externals,
 	devServer:setServer.devServer,
 	plugins: setPlugins.plugins,
 	//路径映射

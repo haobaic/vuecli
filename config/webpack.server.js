@@ -1,4 +1,4 @@
-// 'use strict'
+'use strict'
 module.exports = {
 	//域名配置
 	devServer: {
