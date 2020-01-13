@@ -3,13 +3,17 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+var MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
 	//页面插件配置
 	plugins: [
 		// 请确保引入这个插件！
 		new VueLoaderPlugin(),
 		new CleanWebpackPlugin(),
-		new ExtractTextPlugin('./css/[name][hash].min.css'),
+		new MiniCssExtractPlugin({
+		      filename: './css/[name][hash].min.css,'
+		    }),
+		// new ExtractTextPlugin('./css/[name][hash].min.css'),
 		new HtmlWebpackPlugin({
 			template: "./public/index.html",
 			filename: 'index.html',

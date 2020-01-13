@@ -1,5 +1,6 @@
 // 'use strict'
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const vueLoaderConfig = require('./vue-loader.conf')
 var path = require('path') //node系统模块
 function assetsPath(_path) {
@@ -7,16 +8,26 @@ function assetsPath(_path) {
 }
 module.exports = {
 	module: {
-		rules: [{
-				test: /\.css$/,
-				use: ExtractTextPlugin.extract({
-					fallback: "vue-style-loader",
-					use: [{
-						loader: 'css-loader',
-					}],
-					publicPath: "../" //背景图路径
-				})
-			},
+		rules: [
+			// {
+			// 	test: /\.css$/,
+			// 	use: ExtractTextPlugin.extract({
+			// 		fallback: "vue-style-loader",
+			// 		use: [{
+			// 			loader: 'css-loader',
+			// 		}],
+			// 		publicPath: "../" //背景图路径
+			// 	})
+			// },
+			{
+			        test: /\.css$/,
+			        use: [
+			          process.env.NODE_ENV !== 'production'
+			            ? 'vue-style-loader'
+			            : MiniCssExtractPlugin.loader,
+			          'css-loader'
+			        ]
+			      },
 			{
 			  test: /\.sass$/,
 			  use: [
