@@ -4,11 +4,11 @@
   "description": "",
   "author": "haob",
   "scripts": {
-    "build": "webpack --config=webpack.dev.js",
-    "dev": "webpack-dev-server --config=webpack.dev.js",
-    "report": "webpack --config=webpack.dev.js --progress --report"
+    "build": "webpack --config=webpack.config.js",
+    "dev": "webpack-dev-server --inline",
+    "report": "webpack --config=webpack.config.js --progress --report"
   },
-  "main": "webpack.dev.js",
+  "main": "webpack.config.js",
   "dependencies": {
     "@babel/core": "^7.7.7",
     "@babel/polyfill": "^7.7.0",
