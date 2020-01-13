@@ -1,4 +1,4 @@
-// 'use strict'
+'use strict'
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const vueLoaderConfig = require('./vue-loader.conf')

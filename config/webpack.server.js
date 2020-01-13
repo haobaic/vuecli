@@ -6,7 +6,7 @@ module.exports = {
 		overlay: true, //报错显示到浏览器
 		inline: true, //实时刷新
 		port: 8070, //端口号
-		open: false, //是否自动打开页面
+		open: true, //是否自动打开页面
 		hot: true, //热替换
 		proxy: {
 			'/api': {

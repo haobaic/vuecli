@@ -11,7 +11,7 @@ module.exports = {
 		new VueLoaderPlugin(),
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
-		      filename: './css/[name][hash].min.css,'
+		      filename: './assets/css/[name][hash].min.css'
 		    }),
 		// new ExtractTextPlugin('./css/[name][hash].min.css'),
 		new HtmlWebpackPlugin({

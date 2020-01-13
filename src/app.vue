@@ -7,6 +7,10 @@
 		<img src="@assets/images/2.png" alt="">
 		<div class="img"></div>
 		<el-button>el-button</el-button>
+    <i class="el-icon-edit"></i>
+    <i class="el-icon-share"></i>
+    <i class="el-icon-delete"></i>
+    <el-button type="primary" icon="el-icon-search">搜索</el-button>
 		<router-view/>
 	</div>
 </template>

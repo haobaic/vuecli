@@ -11,6 +11,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const Pattern=process.env.npm_lifecycle_event;
 //判断是否打包
 const isProduction =  Pattern=== "build";
+console.log(!isProduction ? 'development' : 'production')
 module.exports = {
 	entry: './src/main.js', //入口文件,
 	mode: !isProduction ? 'development' : 'production', // 压缩模式
