@@ -22,3 +22,15 @@
 ##插件
 
    引入了element ui 
+   
+##cdn 注入
+   
+   如需引入cdn,可以打开config文件夹中的webpack.cdn.js,引入相应的cdn即可 
+   
+##打包后查看项目    
+    
+	https://cli.vuejs.org/guide/deployment.html#general-guidelines
+	
+	npm install -g serve
+	
+	serve -s dist

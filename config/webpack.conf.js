@@ -24,6 +24,12 @@ module.exports = {
 			automaticNameDelimiter: '~',
 			automaticNameMaxLength: 30,
 			cacheGroups: {
+				// // elementUI选项暂时未使用到（参考elementUI中的配置）
+				// elementUI: {
+				// 	name: 'chunk-elementUI', // 单独将 elementUI 拆包
+				// 	priority: 21, // 权重要大于 libs 和 app 不然会被打包进 libs 或者 app
+				// 	test: /[\\/]node_modules[\\/]element-ui[\\/]/
+				// },
 				vendors: {
 					test: /[\\/]node_modules[\\/]/,
 					priority: -10

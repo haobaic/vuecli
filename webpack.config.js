@@ -3,6 +3,7 @@ const setServer = require('./config/webpack.server.js');
 const setPlugins = require('./config/webpack.plugins.js');
 const setConf = require('./config/webpack.conf.js');
 const setModule = require('./config/webpack.module.js');
+const setCdn=require('./config/webpack.cdn.js');
 function resolve(dir) {
 	return path.join(__dirname, dir);
 }
@@ -11,7 +12,6 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const Pattern=process.env.npm_lifecycle_event;
 //判断是否打包
 const isProduction =  Pattern=== "build";
-console.log(!isProduction ? 'development' : 'production')
 module.exports = {
 	entry: './src/main.js', //入口文件,
 	mode: !isProduction ? 'development' : 'production', // 压缩模式
@@ -21,7 +21,11 @@ module.exports = {
 		chunkFilename: 'js/[name].bundle.js',
 		path: path.resolve(__dirname, 'dist') //输出的路径
 	},
+	//cdn资源
+	externals:setCdn.externals,
+	//域名配置
 	devServer:setServer.devServer,
+	//生成页面配置
 	plugins: setPlugins.plugins,
 	//路径映射
 	resolve: { //引入vue.js
@@ -39,7 +43,9 @@ module.exports = {
 		aggregateTimeout: 500, //防止重复保存频繁重新编译,500毫米内重复保存不打包
 		poll: 1000 //每秒询问的文件变更的次数
 	},
+	//代码配置
 	optimization: setConf.optimization,
+	//loader配置
 	module:setModule.module
 }
 //判断是否打开分析页面
