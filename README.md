@@ -18,3 +18,11 @@
 ##项目打包查看分析图
 	
 	npm run report  打包查看分析图
+
+##打包后查看项目    
+    
+	https://cli.vuejs.org/guide/deployment.html#general-guidelines
+	
+	npm install -g serve
+	
+	serve -s dist

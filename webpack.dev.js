@@ -21,6 +21,7 @@ module.exports = {
 		chunkFilename: 'js/[name].bundle.js',
 		path: path.resolve(__dirname, 'dist') //输出的路径
 	},
+	//cdn资源
 	externals:setCdn.externals,
 	devServer:setServer.devServer,
 	plugins: setPlugins.plugins,

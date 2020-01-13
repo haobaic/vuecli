@@ -74,6 +74,10 @@ module.exports = {
 				}]
 			},
 			{
+			    test: /\.ejs/,
+			    use: ['ejs-loader'],
+			  },
+			{
 				test: /\.js$/,
 				loader: 'babel-loader',
 				options: { //如果有这个设置则不用再添加.babelrc文件进行配置
